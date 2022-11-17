@@ -1,18 +1,18 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "title": "pantalon",
     "price": 420
   },
   {
     "id": 6,
-    "title": "pantalon",
-    "price": 420
+    "title": "remera",
+    "price": 380
   },
   {
     "id": 8,
-    "title": "pantalon",
-    "price": 420
+    "title": "jeans",
+    "price": 730
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
   },
   {
     "id": 4,
-    "title": "pantalon",
+    "title": "short",
     "price": 420
   }
 ]

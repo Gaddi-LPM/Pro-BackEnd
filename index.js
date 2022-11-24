@@ -1,29 +1,16 @@
 
 let express = require("express");
-let fs = require("fs")
-const PORT = 8080;
+const PORT = 3001;
 let app = express();
 
+let serverRoutes = require("./routes")
 
-let datos = fs.readFileSync("./productos.txt", "utf-8");
-let producto = JSON.parse(datos)
+app.use(express.urlencoded({extended: true}));
+app.use(express.json()) // No olvidar  !!!
 
-let proRandom = Math.floor(Math.random() * producto.length)
-let proAleatorio = producto[proRandom]
-console.log(proAleatorio);
+app.use(express.static("public/html"));
 
-
-app.get("/", (req , res)=>{
-    res.send(`<h1 style = "color: green"> Welcome to my Server </h1>`);
-})
-
-app.get("/productos", (req , res)=>{
-    res.send(producto);
-
-})
-
-app.get("/productoRandom", (req , res)=>{
-    res.send(proAleatorio);
-})
+serverRoutes(app);
 
 app.listen(PORT, ()=> console.log(`Server on http://localhost:${PORT}`));
+

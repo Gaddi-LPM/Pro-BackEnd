@@ -10,6 +10,6 @@ module.exports = app => {
 
     app.use("/", router);
     router.get("/", (req, res, next) => {
-        res.send("WELCOME TO MY SERVER!!!")
+        res.render("index")
     })
 }

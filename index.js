@@ -8,7 +8,10 @@ let serverRoutes = require("./routes")
 app.use(express.urlencoded({extended: true}));
 app.use(express.json()) // No olvidar  !!!
 
-app.use(express.static("public/html"));
+app.use(express.static("public"));
+
+app.set("view engine", "ejs");
+app.set("views", "views")
 
 serverRoutes(app);
 

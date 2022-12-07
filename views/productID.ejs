@@ -1,0 +1,19 @@
+
+<%- include("template/head", {titulo: "ID-Producto"}) %> 
+
+<body style="background-color: brown;">
+    <h3 style="color: white;">El producto seleccionado es</h3>
+    <ul style="color: white">
+        <li>ID  <%= productoID.id %></li>
+        <li>Title  <%= productoID.title %></li>
+        <li>Price  $ <%= productoID.price %></li>
+    </ul>
+    
+    <button>
+        <a href="/productos">VOLVER</a>
+    </button>
+
+    
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+
+<%- include("template/head", {titulo: "Productos"}) %> 
+
+<body>
+    <h1>Productos</h1>
+    <ul class="list-product">
+        <% productos.forEach(item => { %>
+            <li class="list-elem">ID       <%= item.id %> </li>
+            <li class="list-elem-w">TITLE    <%= item.title %> </li>
+            <li class="list-elem">PRICE  $ <%= item.price %> </li><br>
+        <% }) %> 
+    </ul>
+
+    <button>
+        <a href="/">VOLVER</a>
+    </button>
+
+</body>
+</html>

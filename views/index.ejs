@@ -1,0 +1,25 @@
+
+<%- include("template/head", {titulo: "Formulario"}) %> 
+<body>
+    
+    <form action="http://localhost:3001/productos" method="post">
+        <fieldset>
+                    
+            <legend>Formulario Carga de Producto </legend><br>
+
+            <label for="Nombre Producto">Nombre Producto</label><br>
+            <input type="text" name="title"><br>
+            <label for="Precio">Precio</label><br>
+            <input type="number" name="price"><br><br>
+            
+            <button type="reset">LIMPIAR</button>
+            <button type="submit">ENVIAR</button>
+            <button>
+                <a href="/productos"> ===> </a>
+            </button>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
